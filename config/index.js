@@ -1,4 +1,4 @@
-const { EMAILPASSWORD, LOGINPASSWORD } = process.env;
+const { EMAILPASSWORD, LOGINPASSWORD, EMAIL, USERID } = process.env
 
 /****** base config ****** */
 const config = {
@@ -20,14 +20,14 @@ const config = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    }
+    },
   },
-  formData: `email=liou666%40126.com&passwd=${LOGINPASSWORD}&code=`,
+  formData: `email=${USERID}&passwd=${LOGINPASSWORD}&code=`,
   email: {
     126: {
-      user: 'liou666@126.com',
-      from: 'liou666@126.com',
-      to: 'liou666@126.com',
+      user: EMAIL,
+      from: EMAIL,
+      to: EMAIL,
       pass: EMAILPASSWORD,
     },
   },
